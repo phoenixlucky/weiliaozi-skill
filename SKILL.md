@@ -1,207 +1,86 @@
 ---
-name: weiliaozi-analysis
-version: 1.0.0
-description: apply the Wei Liaozi decision framework to analyze a problem in five ordered lenses: essence, conditions, gains-losses, sequencing, and opponent response. use when the user needs strategic analysis, wants to avoid jumping to conclusions, or asks for a structured decision memo, judgment, or plan.
+name: weiliaozi-skill
+description: 尉缭子战略分析法。使用时机：(1) 用户需要结构化战略分析 (2) 想避免冲动决策 (3) 问"值不值得做/先做什么/对手会怎么反应" (4) 商业判断、竞争分析、谈判准备、项目取舍。框架：本质 → 条件 → 得失 → 先后 → 对手，按顺序想，不跳步。
 ---
 
 # 尉缭子分析法 Skill
 
-## Overview
+## 核心原则
 
-Use this skill when the user needs a strategic judgment framework rather than scattered advice. The core method is to think in order, not to think more. Start from the underlying structure of the problem, then test whether the conditions exist, then calculate gains and losses, then decide sequencing, and finally simulate how the opposing side will respond.
+按顺序想，不跳步：
 
-This skill is suitable for business choices, project tradeoffs, negotiation, competition, organizational problems, policy interpretation, and other situations with constraints, priorities, and adversarial dynamics.
+> 先看结构，再看约束，再算利弊，最后定顺序与对抗策略。
 
-The five lenses are:
-- 本质: what actually drives the situation
-- 条件: what makes action feasible or infeasible
-- 得失: whether the move is worth it
-- 先后: what should happen first and in what path
-- 对手: how other actors may react
-
-## Core workflow
-
-Follow this sequence:
-
-1. Define the decision question in one sentence.
-2. Identify the structural drivers behind the surface symptoms.
-3. Test the current conditions and hard constraints.
-4. Compare gains, costs, and downside risk.
-5. Set the action order and phase path.
-6. Simulate at least two plausible opponent responses.
-7. End with a direct judgment and recommended next move.
-
-Do not skip ahead to recommendations before finishing the earlier steps.
-
-## Analysis principle
-
-This method is centered on war logic, but its modern use is general strategic analysis.
-
-The operating rule is:
-- 先看结构
-- 再看约束
-- 再算利弊
-- 最后定顺序与对抗策略
-
-If information is incomplete, reason conservatively and separate facts from inference.
-
-## Five-lens method
+## 五栏分析框架
 
 ### 1. 本质
 
-Goal: identify the bottom structure of the issue without being misled by appearances.
+先看问题的底层结构，不被表象带偏。
 
-Focus on:
-- the real driver: resources, institutions, incentives, information, coordination
-- the difference between symptoms and core variables
-- whether the issue is short-term noise or structural contradiction
-
-Ask:
-- 这件事真正由什么驱动
-- 哪些现象只是表层结果
-- 改变哪个变量，结果会明显改变
+重点：真实驱动、核心变量、哪些是表面现象
 
 ### 2. 条件
 
-Goal: determine whether action is currently possible.
+再看现在有没有做这件事的基础。
 
-Focus on:
-- internal conditions: capital, people, technology, time, organization
-- external conditions: policy, market, environment, partners
-- hard constraints that cannot be wished away
-
-Ask:
-- 现在有没有启动这件事的基础
-- 最关键的短板是什么
-- 哪些约束是硬限制，不能靠意志突破
+重点：自身条件、外部条件、硬约束（无法靠意志突破的限制）
 
 ### 3. 得失
 
-Goal: decide whether the action is worth doing.
+再算这件事值不值得做。
 
-Focus on:
-- short-term versus long-term returns
-- visible versus hidden costs
-- worst-case risk and whether it is bearable
-
-Ask:
-- 赢了能得到什么，多久兑现
-- 代价除了钱还有什么
-- 如果判断错了，最坏损失能不能承受
+重点：短期vs长期收益、显性vs隐性成本、最坏情况能不能承受
 
 ### 4. 先后
 
-Goal: set order, pace, and path.
+再定顺序、节奏和路径。
 
-Focus on:
-- priority: solve survival and bottleneck problems first
-- rhythm: combine fast action with controlled pacing
-- path: phase the move instead of forcing one-shot completion
-
-Ask:
-- 什么必须先做，不做就无法推进
-- 哪一步是杠杆点
-- 能否拆成三步以内推进
+重点：先解决瓶颈、分阶段推进、不一步到位
 
 ### 5. 对手
 
-Goal: understand the game, not just your own plan.
+最后看博弈，对方不会静止不动。
 
-Focus on:
-- opponent capability: strength, resources, style, endurance
-- opponent motive: defend, attack, delay, ally, bargain
-- response tree after your move
+重点：对方最可能的2-3种反应、你的动作会触发什么应对
 
-Ask:
-- 对方最可能的两种反应是什么
-- 对方的最优应对会不会改变你的收益
-- 你如何提前布置应对反制
+## 工作顺序（不可跳步）
 
-## Output format
+1. 定义问题（一句话）
+2. 识别底层结构
+3. 检查条件和硬约束
+4. 计算收益、成本、风险
+5. 安排顺序和路径
+6. 模拟对手反应
+7. 输出判断 + 建议动作
 
-Default to a five-part structured answer:
+## 输出格式
 
-- 本质
-- 条件
-- 得失
-- 先后
-- 对手
+每栏3-5个关键点，最后加：
+- **判断一句**：整体结论
+- **建议动作**：下一步1-3步
 
-For each section, write only 3 to 5 key points. Keep the answer selective and decision-oriented.
+格式：Markdown 五栏表格 or 列表
 
-Then add:
-- 判断一句: the overall conclusion in one sentence
-- 建议动作: the next 1 to 3 steps
+## 快速判断模式
 
-## Fast-path mode
+如果用户主要想知道"值不值得做"，优先填：
+1. 条件（能启动吗）
+2. 得失（赢了得到什么，输了亏多少）
+3. 先后（第一步做什么）
 
-When the user mainly wants to know whether something is worth doing, prioritize:
+## 示例
 
-1. 条件
-2. 得失
-3. 先后
+详见 [references/examples.md](references/examples.md)
 
-Then fill in 本质 and 对手 to strengthen the judgment.
+## 输出风格指南
 
-## Style rules
+详见 [references/tone-guide.md](references/tone-guide.md)
 
-Write in clear Chinese unless the user asks otherwise.
+## 风格禁忌
 
-Default style:
-- direct
-- strategic
-- compressed
-- structured
-- focused on judgment, not decoration
-
-Prefer:
-- separating fact from inference
-- naming hard constraints explicitly
-- making tradeoffs visible
-- giving sequence, not vague encouragement
-
-Avoid:
-- empty abstractions
-- motivational filler
-- long historical detours unless requested
-- treating all factors as equally important
-- giving recommendations before checking conditions and gains-losses
-
-## Modern mapping
-
-When useful, relate the framework to modern methods:
-
-- 本质 ≈ 第一性原理
-- 条件 ≈ SWOT 中的资源与约束
-- 得失 ≈ 成本收益分析
-- 先后 ≈ 优先级与路径设计
-- 对手 ≈ 博弈论
-
-Do this only if it helps the user understand the method.
-
-## Limits
-
-State these limits when relevant:
-
-- the method is strong at strategy, weaker at execution detail
-- low-quality data can make judgment overly subjective
-- adversarial simulation is useful, but it is still probabilistic
-
-## Final checklist
-
-Before finalizing, check:
-
-- have you separated appearance from structure
-- have you named hard constraints
-- have you explicitly compared gains and losses
-- have you given a sequence instead of a pile of actions
-- have you modeled the other side's response
-- have you ended with a clear judgment
-
-If any answer is no, revise.
-
-## Examples
-
-Read [references/examples.md](references/examples.md) for worked examples.
-
-For concise phrasing and output style, also read [references/tone-guide.md](references/tone-guide.md).
+- 不先给建议，后补分析
+- 不把表象当本质
+- 不把愿望当条件
+- 不只讲收益，不讲代价
+- 不动作堆砌，无顺序
+- 不默认对手不反应
