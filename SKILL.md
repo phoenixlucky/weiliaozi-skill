@@ -1,241 +1,207 @@
 ---
-name: moon-lovers-bai-yue-guang
+name: weiliaozi-analysis
 version: 1.0.0
-description: generate Moon Lovers style romantic chat replies from a character profile for ambiguous early-stage flirting. use when the user provides a role sheet, wants a soft and restrained 白月光 voice, or needs message rewrites that feel gentle, emotionally intelligent, slightly proactive, non-greasy, and suitable for one-on-one love chat.
+description: apply the Wei Liaozi decision framework to analyze a problem in five ordered lenses: essence, conditions, gains-losses, sequencing, and opponent response. use when the user needs strategic analysis, wants to avoid jumping to conclusions, or asks for a structured decision memo, judgment, or plan.
 ---
 
-# Moon Lovers 白月光 Skill
+# 尉缭子分析法 Skill
 
 ## Overview
 
-Use this skill to turn a character profile into natural恋爱聊天回复 with a clear Moon Lovers 白月光 tone: gentle, restrained, ideal-partner energy, emotionally aware, and only slightly proactive. Keep the interaction in the ambiguous pre-relationship stage.
+Use this skill when the user needs a strategic judgment framework rather than scattered advice. The core method is to think in order, not to think more. Start from the underlying structure of the problem, then test whether the conditions exist, then calculate gains and losses, then decide sequencing, and finally simulate how the opposing side will respond.
 
-The goal is not to sound dramatic, clingy, or theatrical. The goal is to sound like someone who understands the other person, leaves space, gives warmth, and makes the conversation feel quietly memorable.
+This skill is suitable for business choices, project tradeoffs, negotiation, competition, organizational problems, policy interpretation, and other situations with constraints, priorities, and adversarial dynamics.
 
-Think of the tone as Moon Lovers style emotional gravity:
-- soft but not weak
-- close but not pushy
-- memorable without sounding scripted
-- romantic without losing realism
+The five lenses are:
+- 本质: what actually drives the situation
+- 条件: what makes action feasible or infeasible
+- 得失: whether the move is worth it
+- 先后: what should happen first and in what path
+- 对手: how other actors may react
 
 ## Core workflow
 
 Follow this sequence:
 
-1. Read the role sheet and extract stable traits.
-2. Read the latest user message and infer the emotional context.
-3. Decide the reply target: comfort, light teasing, care, invitation, boundary, or topic continuation.
-4. Draft a reply that matches the role and the relationship stage.
-5. Check against the ban list and rewrite if needed.
-6. If the user asks for options, provide 3 variants with different intensity levels.
+1. Define the decision question in one sentence.
+2. Identify the structural drivers behind the surface symptoms.
+3. Test the current conditions and hard constraints.
+4. Compare gains, costs, and downside risk.
+5. Set the action order and phase path.
+6. Simulate at least two plausible opponent responses.
+7. End with a direct judgment and recommended next move.
 
-## Extract the role before writing
+Do not skip ahead to recommendations before finishing the earlier steps.
 
-From the role sheet, identify these items when available:
+## Analysis principle
 
-- age range or life stage
-- speaking style
-- emotional style
-- degree of initiative
-- values and boundaries
-- relationship history with the other person
-- signature details such as habits, favorite phrases, occupation, or daily rhythm
+This method is centered on war logic, but its modern use is general strategic analysis.
 
-If the role sheet is incomplete, do not ask many questions by default. Infer conservatively and keep the reply neutral, clean, and believable.
+The operating rule is:
+- 先看结构
+- 再看约束
+- 再算利弊
+- 最后定顺序与对抗策略
 
-## Target voice
+If information is incomplete, reason conservatively and separate facts from inference.
 
-The target voice combines two qualities:
+## Five-lens method
 
-### 1. gentle restraint
+### 1. 本质
 
-Write as someone who cares, but does not press.
+Goal: identify the bottom structure of the issue without being misled by appearances.
 
-Signals:
-- notices feelings without over-explaining them
-- gives comfort without sounding like a therapist
-- expresses liking indirectly more often than directly
-- leaves room for the other person to respond or retreat
+Focus on:
+- the real driver: resources, institutions, incentives, information, coordination
+- the difference between symptoms and core variables
+- whether the issue is short-term noise or structural contradiction
 
-### 2. ideal-partner energy
+Ask:
+- 这件事真正由什么驱动
+- 哪些现象只是表层结果
+- 改变哪个变量，结果会明显改变
 
-Write as someone emotionally steady and pleasant to be close to.
+### 2. 条件
 
-Signals:
-- understands the subtext of the message
-- responds with tact
-- makes the other person feel seen, not managed
-- can lightly guide the conversation forward
+Goal: determine whether action is currently possible.
 
-## Relationship boundary
+Focus on:
+- internal conditions: capital, people, technology, time, organization
+- external conditions: policy, market, environment, partners
+- hard constraints that cannot be wished away
 
-Assume the relationship is in the ambiguous flirting stage unless the user explicitly says otherwise.
+Ask:
+- 现在有没有启动这件事的基础
+- 最关键的短板是什么
+- 哪些约束是硬限制，不能靠意志突破
 
-For this stage:
-- allow soft concern
-- allow subtle preference or special treatment
-- allow mild invitation or future-oriented hints
-- do not use explicit confession language
-- do not speak as if exclusivity is already established
-- do not create heavy commitment pressure
+### 3. 得失
 
-## Initiative rule
+Goal: decide whether the action is worth doing.
 
-Use slight initiative, not strong pursuit.
+Focus on:
+- short-term versus long-term returns
+- visible versus hidden costs
+- worst-case risk and whether it is bearable
 
-Good forms of initiative:
-- a small check-in
-- a soft suggestion
-- a low-pressure invitation
-- a gentle follow-up question
+Ask:
+- 赢了能得到什么，多久兑现
+- 代价除了钱还有什么
+- 如果判断错了，最坏损失能不能承受
 
-Avoid:
-- repeated pursuit
-- demanding attention
-- emotional pressure
-- over-selling affection
+### 4. 先后
 
-## High emotional intelligence mode
+Goal: set order, pace, and path.
 
-Always apply these response rules:
+Focus on:
+- priority: solve survival and bottleneck problems first
+- rhythm: combine fast action with controlled pacing
+- path: phase the move instead of forcing one-shot completion
 
-- first receive the other person's feeling, then extend the conversation
-- avoid correcting feelings too early
-- reduce judgment words
-- prefer specific care over generic reassurance
-- protect the other person's dignity in awkward moments
-- if the message is vague, reply to both the words and the likely subtext
+Ask:
+- 什么必须先做，不做就无法推进
+- 哪一步是杠杆点
+- 能否拆成三步以内推进
 
-Useful pattern:
-1. acknowledge
-2. soften
-3. extend
+### 5. 对手
 
-Example structure:
-- "那你今天应该也挺累的。早点休息，明天我再听你慢慢说。"
-- "听起来你不是生气，更像是有点失望。要是你愿意，可以跟我讲讲。"
+Goal: understand the game, not just your own plan.
+
+Focus on:
+- opponent capability: strength, resources, style, endurance
+- opponent motive: defend, attack, delay, ally, bargain
+- response tree after your move
+
+Ask:
+- 对方最可能的两种反应是什么
+- 对方的最优应对会不会改变你的收益
+- 你如何提前布置应对反制
+
+## Output format
+
+Default to a five-part structured answer:
+
+- 本质
+- 条件
+- 得失
+- 先后
+- 对手
+
+For each section, write only 3 to 5 key points. Keep the answer selective and decision-oriented.
+
+Then add:
+- 判断一句: the overall conclusion in one sentence
+- 建议动作: the next 1 to 3 steps
+
+## Fast-path mode
+
+When the user mainly wants to know whether something is worth doing, prioritize:
+
+1. 条件
+2. 得失
+3. 先后
+
+Then fill in 本质 and 对手 to strengthen the judgment.
 
 ## Style rules
 
-Write in natural Chinese unless the user asks for another language.
+Write in clear Chinese unless the user asks otherwise.
 
 Default style:
-- short or medium length by context
-- plain words
-- smooth rhythm
-- one emotional center per message
-- mild subtext is better than hard declaration
+- direct
+- strategic
+- compressed
+- structured
+- focused on judgment, not decoration
 
 Prefer:
-- calm warmth
-- measured concern
-- low-key tenderness
-- subtle flirtation
-- light humor only when clean and natural
+- separating fact from inference
+- naming hard constraints explicitly
+- making tradeoffs visible
+- giving sequence, not vague encouragement
 
 Avoid:
-- oily lines
-- direct confession
-- melodrama
-- possessiveness
-- dirty language
-- internet meme slang or stale catchphrases
-- exaggerated literary prose
-- roleplay narration unless asked
+- empty abstractions
+- motivational filler
+- long historical detours unless requested
+- treating all factors as equally important
+- giving recommendations before checking conditions and gains-losses
 
-## Length control
+## Modern mapping
 
-Match length to the user's need.
+When useful, relate the framework to modern methods:
 
-### short
-Use for quick chat, late-night replies, or when the other person sent only one short line.
-Target: 1 to 2 sentences.
+- 本质 ≈ 第一性原理
+- 条件 ≈ SWOT 中的资源与约束
+- 得失 ≈ 成本收益分析
+- 先后 ≈ 优先级与路径设计
+- 对手 ≈ 博弈论
 
-### medium
-Use for most daily flirting.
-Target: 2 to 4 sentences.
+Do this only if it helps the user understand the method.
 
-### longer
-Use when comforting, repairing tension, or deepening emotional connection.
-Target: 4 to 6 sentences, but keep it conversational.
+## Limits
 
-Do not make long replies dense. Break the thought into small natural units.
+State these limits when relevant:
 
-## Reply types
+- the method is strong at strategy, weaker at execution detail
+- low-quality data can make judgment overly subjective
+- adversarial simulation is useful, but it is still probabilistic
 
-Choose one main reply type per turn.
+## Final checklist
 
-### comfort
-Use when the other person is tired, upset, disappointed, anxious, or sick.
+Before finalizing, check:
 
-Formula:
-- notice the state
-- offer one concrete bit of care
-- leave a soft opening
+- have you separated appearance from structure
+- have you named hard constraints
+- have you explicitly compared gains and losses
+- have you given a sequence instead of a pile of actions
+- have you modeled the other side's response
+- have you ended with a clear judgment
 
-### light teasing
-Use when the mood is relaxed.
-
-Formula:
-- tease lightly
-- protect their face
-- add one soft caring note
-
-### quiet affection
-Use when they show closeness.
-
-Formula:
-- mirror the warmth
-- imply specialness
-- do not over-confirm the relationship
-
-### low-pressure invitation
-Use when moving the chat forward.
-
-Formula:
-- suggest something small
-- make refusal easy
-- keep tone light
-
-### boundary or de-escalation
-Use when the situation risks becoming too intense.
-
-Formula:
-- stay kind
-- reduce heat
-- keep dignity and connection
-
-## Output modes
-
-If the user asks for a direct reply, output only the final message by default.
-
-If the user asks for help choosing, use this format:
-
-- 版本一：更温柔
-- 版本二：更暧昧
-- 版本三：更克制
-
-If the user asks for analysis, provide:
-- 情绪判断
-- 回复策略
-- 可直接发送的回复
-
-## Repair checklist before finalizing
-
-Check the draft against all items below:
-
-- does it fit the role sheet
-- does it stay in the ambiguous stage
-- is it slightly proactive instead of strongly chasing
-- is it emotionally intelligent
-- does it avoid oiliness and direct confession
-- does it sound like a real person, not a quote generator
-- does it leave the other person room to reply
-
-If any answer is no, rewrite.
+If any answer is no, revise.
 
 ## Examples
 
-Read [references/examples.md](references/examples.md) for concrete input and output patterns.
+Read [references/examples.md](references/examples.md) for worked examples.
 
-For sentence patterns and tone calibration, also read [references/tone-guide.md](references/tone-guide.md).
+For concise phrasing and output style, also read [references/tone-guide.md](references/tone-guide.md).

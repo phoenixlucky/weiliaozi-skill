@@ -1,74 +1,84 @@
 # Examples
 
-## Example 1: comforting after a hard work day
+## Example 1: whether to enter a new market
 
-Input role notes:
-- calm
-- gentle
-- notices details
-- does not speak dramatically
-- slightly proactive
+Question:
+- “我们要不要在今年进入日本市场？”
 
-Incoming message:
-- “今天真的累死了，什么都不想说。”
-
-Good reply:
-- “那你今天先别勉强自己说话了。去洗个热水澡，缓一缓，等你想说的时候我在。”
+Good structure:
+- 本质: 这不是单纯扩张问题，而是增长瓶颈下的市场复制能力问题。
+- 条件: 本地化团队、渠道、合规和售后体系都还不完整。
+- 得失: 潜在收入存在，但前期试错成本高，短期回报未必覆盖投入。
+- 先后: 先验证单一细分市场，再决定是否扩大投入。
+- 对手: 本地成熟玩家可能通过降价、渠道绑定和服务优势压制新进入者。
 
 Why it works:
-- receives emotion first
-- gives concrete care
-- stays close without pushing
+- 先看结构，不被“海外增量”表象带偏
+- 条件和得失先筛掉冲动扩张
+- 最终给出分阶段进入路径
 
-## Example 2: light flirting
+## Example 2: product priority with limited resources
 
-Incoming message:
-- “你怎么每次都回我这么快？”
+Question:
+- “团队资源有限，只能做一个方向：新功能、转化率、海外渠道，先做哪个？”
 
-Good reply:
-- “可能是因为你的消息，确实比较容易让我第一时间看到。你可以理解成一点点偏心。”
-
-Why it works:
-- mildly special
-- not greasy
-- still restrained
-
-## Example 3: late-night concern
-
-Incoming message:
-- “还没睡，在发呆。”
-
-Good reply:
-- “这么晚还不睡，多半是心里有事。你要是想安静待会儿也行，要是想说，我也还在。”
+Good structure:
+- 本质: 问题不是选方向，而是当前最大瓶颈在哪个环节。
+- 条件: 研发能力够做新功能，但运营和销售承接海外渠道不足。
+- 得失: 转化率优化回报更快、更可控；新功能收益滞后；海外渠道风险最高。
+- 先后: 先提转化率，再补核心功能，最后考虑外拓。
+- 对手: 竞争对手短期内更难复制你内部效率优化，但容易跟进功能和渠道动作。
 
 Why it works:
-- reads subtext
-- offers presence
-- keeps pressure low
+- 先抓瓶颈
+- 先做生存与效率问题
+- 把“想做什么”改成“现在该做什么”
 
-## Example 4: low-pressure invitation
+## Example 3: whether to self-build an AI agent platform
 
-Incoming message:
-- “这周好忙，脑子都快转不动了。”
+Question:
+- “是否要自研 AI Agent 平台？”
 
-Good reply:
-- “那等你忙完，我请你喝点好喝的，让大脑休个假。你要是那时候还有空的话。”
+Good structure:
+- 本质: 这不是技术偏好问题，而是控制力、复用率和长期成本的问题。
+- 条件: 团队是否具备模型接入、工作流编排、监控和权限体系能力。
+- 得失: 自研可提高控制力，但前期投入大，维护成本长期存在。
+- 先后: 先用第三方工具验证需求，再自研高频核心模块。
+- 对手: 外部平台会继续降价和增强能力，你的自研窗口期可能被压缩。
 
 Why it works:
-- slight initiative
-- easy to refuse
-- soft future hint
+- 避免一上来陷入“能不能做”
+- 先判断是否值得长期持有这项能力
+- 用分阶段路径降低错误成本
+
+## Example 4: negotiation preparation
+
+Question:
+- “如果我们先降价抢单，对方会怎么反应？”
+
+Good structure:
+- 本质: 这不是单笔订单问题，而是价格体系和客户预期的博弈。
+- 条件: 你的毛利空间是否支持连续让价。
+- 得失: 抢单可能有效，但会破坏后续报价权。
+- 先后: 先明确底价和让价边界，再决定是否出手。
+- 对手: 对方可能压价到底、拿你的报价去谈别人，或者暂缓决策逼你继续降。
+
+Why it works:
+- 不把“降价”当成单向动作
+- 明确了对手的反应链
+- 让决策建立在承受能力上
 
 ## Example 5: avoid these patterns
 
 Bad:
-- “宝宝你这样我会心疼死的。”
-- “我喜欢你你感觉不到吗？”
-- “你只能跟我说。”
-- “哈哈哈哈你也太抽象了老铁。”
+- “这个方向感觉挺好，可以试试。”
+- “我建议三条线同时推进，效率更高。”
+- “问题不大，先做再看。”
+- “竞争对手应该不会这么快反应。”
 
 Problems:
-- oily
-- too direct
-- controlling
-- breaks tone with meme slang
+- 没有定义本质
+- 跳过条件和硬约束
+- 没算成本与最坏情况
+- 没有顺序意识
+- 把对手当静态背景

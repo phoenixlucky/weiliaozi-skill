@@ -1,14 +1,23 @@
 {
-  "name": "moon-lovers",
+  "name": "weiliaozi-skill",
   "version": "1.0.0",
-  "description": "Moon Lovers 白月光 - 温柔克制白月光恋爱聊天回复 Skill",
+  "description": "尉缭子分析法 - 按本质、条件、得失、先后、对手进行结构化决策分析",
   "author": "phoenixlucky",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phoenixlucky/weiliaozi-skill.git"
+  },
+  "homepage": "https://github.com/phoenixlucky/weiliaozi-skill",
+  "bugs": {
+    "url": "https://github.com/phoenixlucky/weiliaozi-skill/issues"
+  },
   "keywords": [
-    "moon-lovers",
-    "白月光",
-    "恋爱",
-    "聊天回复",
+    "weiliaozi",
+    "尉缭子",
+    "战略分析",
+    "决策框架",
+    "博弈",
     "skill"
   ]
 }
