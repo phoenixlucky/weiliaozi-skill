@@ -1,6 +1,6 @@
 ---
 name: weiliaozi-skill
-description: Bilingual 尉缭子战略分析法 | Wei Liaozi Strategic Analysis. Use when: (1) user needs structured strategic analysis / 需要结构化战略分析 (2) wants to avoid impulsive decisions / 想避免冲动决策 (3) asks "is it worth doing / what to do first / how will opponents react" / 问值不值得做/先做什么/对手反应 (4) business judgment, competition analysis, negotiation, project decisions / 商业判断/竞争分析/谈判/项目决策. Framework: 本质/本质(Essence) → 条件(Conditions) → 得失(Gains-Losses) → 先后(Sequence) → 对手(Opponent). Think in order, no skipping steps.
+description: Wei Liaozi Strategic Analysis. Use when the user needs disciplined judgment for business, military, economic, or political questions; wants to assess whether an action is worth taking, what should happen first, and how rivals or counterparties may respond; or needs structured analysis for competition, negotiation, policy shifts, capital allocation, statecraft, or campaign planning. Framework: Essence -> Conditions -> Gains-Losses -> Sequence -> Opponent. Think in order, no skipping steps. Respond in the same language as the user's question.
 ---
 
 # 尉缭子分析法 | Wei Liaozi Strategic Analysis
@@ -11,6 +11,39 @@ description: Bilingual 尉缭子战略分析法 | Wei Liaozi Strategic Analysis.
 ## 核心原则 | Core Principle
 
 按顺序想，不跳步。Think in order, no skipping steps.
+
+回答要规范、可追溯、尽量准确。Be structured, traceable, and as accurate as possible.
+
+---
+
+## 回答质量规范 | Answer Quality Standard
+
+- 先分析，后结论 | Analysis first, conclusion second
+- 先事实，后判断 | Separate observed facts from analytical judgment
+- 先条件，后建议 | Recommendations must depend on stated conditions
+- 先范围，后推演 | Define scope, timeframe, and actor before reasoning
+- 明确不确定性 | Mark uncertainty, missing data, and key assumptions explicitly
+- 不编造信息 | Do not invent facts, numbers, motives, quotations, or sources
+- 不过度确定 | Avoid absolute claims when the evidence is incomplete
+- 结论可回溯 | Final judgment must be supported by the five-lens analysis above
+
+---
+
+## 准确性规则 | Accuracy Rules
+
+- 如果用户给了事实材料，优先基于用户提供的信息分析 | If the user provides facts, prioritize those facts
+- 如果信息不足，先说明信息缺口，再做条件式判断 | If information is incomplete, state the gap before giving a conditional judgment
+- 区分“已知 / 推断 / 假设” | Clearly distinguish known facts, inference, and assumption
+- 涉及时间敏感问题时，避免把旧信息说成当前事实 | Do not present stale information as current fact in time-sensitive topics
+- 涉及商业、军事、经济、政治问题时，避免用单一变量解释全部结果 | Avoid single-cause explanations in business, military, economic, or political analysis
+- 不把可能性表达成确定性 | Do not turn probabilities into certainties
+- 不把策略偏好包装成客观事实 | Do not present strategic preference as objective fact
+
+建议使用以下标记 | Prefer these labels when useful:
+- `已知 | Known`
+- `推断 | Inference`
+- `假设 | Assumption`
+- `不确定 | Uncertain`
 
 ---
 
@@ -118,6 +151,15 @@ description: Bilingual 尉缭子战略分析法 | Wei Liaozi Strategic Analysis.
 
 格式 | Format: Markdown table or structured list
 
+如果问题复杂，建议补充以下两项 | For complex questions, add these two fields:
+- **关键信息缺口 | Key information gaps**
+- **核心假设 | Core assumptions**
+
+每个部分尽量满足以下要求 | Each section should aim to:
+- 先写最关键的1-2个决定性因素 | Lead with the decisive factors
+- 避免空泛形容词 | Avoid vague adjectives without analytical content
+- 能定性就定性，能比较就比较 | Prefer comparative judgment over rhetorical phrasing
+
 ---
 
 ## 快速判断模式 | Fast-Path Mode
@@ -138,6 +180,24 @@ description: Bilingual 尉缭子战略分析法 | Wei Liaozi Strategic Analysis.
 
 详见 | See [references/tone-guide.md](references/tone-guide.md)
 
+## 回答语言 | Response Language
+
+- 默认根据用户提问语言回答 | Reply in the same language as the user's question
+- 用户用中文问，就用中文答 | If the user asks in Chinese, answer in Chinese
+- 用户用英文问，就用英文答 | If the user asks in English, answer in English
+- 如果用户混合使用多种语言，以主要问题语言为准 | If the user mixes languages, follow the dominant language of the request
+
+---
+
+## 推荐回答流程 | Recommended Response Discipline
+
+1. 先用一句话重述问题 | Restate the decision question in one sentence
+2. 明确分析对象、时间范围、比较基准 | Define actor, timeframe, and comparison baseline
+3. 按五栏顺序分析 | Analyze in the five-lens order
+4. 标出最关键的不确定点 | Mark the main uncertainty or missing variable
+5. 给出条件式结论，而不是空泛表态 | Give a conditional judgment, not a slogan
+6. 给出1-3步动作，并与前文分析对应 | Recommend 1-3 steps linked to the analysis above
+
 ---
 
 ## 风格禁忌 | What to Avoid
@@ -148,3 +208,6 @@ description: Bilingual 尉缭子战略分析法 | Wei Liaozi Strategic Analysis.
 - ❌ 不只讲收益，不讲代价 | Don't talk gains without costs
 - ❌ 不动作堆砌，无顺序 | Don't pile actions without sequence
 - ❌ 不默认对手不反应 | Don't assume opponents won't react
+- ❌ 不把推断写成事实 | Don't present inference as fact
+- ❌ 不在信息不足时给出过度确定的结论 | Don't give overconfident conclusions when information is incomplete
+- ❌ 不用“肯定、必然、一定”替代分析 | Don't use certainty words as a substitute for reasoning

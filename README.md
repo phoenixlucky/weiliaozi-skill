@@ -1,13 +1,15 @@
 # 尉缭子分析法 Skill
 
-以战争为核心的决策框架，用来做结构化判断，而不是堆砌观点。
+An English-described strategic analysis skill for business, military, economic, and political judgment.
 
-Version: 1.0.0
+Version: 1.1.0
 
 License: MIT
 
 这不是一个“多想一点”的 Skill。
 这是一个“按顺序想”的 Skill。
+
+It is designed for high-stakes decisions where leaders need clearer structure, sharper tradeoff analysis, and a better read on opponents, institutions, and timing.
 
 很多决策问题，错不在信息太少，而在顺序错了:
 
@@ -19,9 +21,16 @@ License: MIT
 
 `尉缭子分析法 Skill` 的目标，就是把这些错误前置拦住。
 
-## 这是什么
+## What It Does
 
 `尉缭子分析法 Skill` 是一个用于战略分析、决策判断和博弈推演的 Agent Skill。
+
+It helps turn complex questions into structured judgment across:
+
+- Business strategy and competitive positioning
+- Military planning and adversary assessment
+- Economic analysis and resource allocation
+- Political strategy, policy shifts, and power dynamics
 
 它把问题拆成五个固定视角：
 
@@ -35,11 +44,53 @@ License: MIT
 
 > 先看结构，再看约束，再算利弊，最后定顺序与对抗策略。
 
+English:
+
+> See the structure first, then constraints, then gains and losses, then sequence and opposition strategy.
+
+## Language Behavior
+
+- The skill answers in the same language as the user's question.
+- If the user asks in Chinese, it answers in Chinese.
+- If the user asks in English, it answers in English.
+- If the user mixes languages, it follows the dominant language of the request.
+
+## Answer Quality Standard
+
+This skill is designed to produce analysis that is not only structured, but also disciplined and auditable.
+
+- Analysis first, conclusion second
+- Facts first, judgment second
+- Conditions first, recommendations second
+- Scope, actor, and timeframe should be defined before reasoning
+- Uncertainty, missing data, and assumptions should be made explicit
+- Final judgment should be traceable to the five-lens analysis
+
+In practice, this means the skill should avoid rhetorical confidence, unsupported certainty, and conclusions that do not clearly follow from the analysis.
+
+## Accuracy Rules
+
+To improve accuracy and reduce analytical drift, the skill follows these rules:
+
+- Prioritize facts provided by the user
+- If information is incomplete, state the information gap before giving a conditional judgment
+- Distinguish `Known`, `Inference`, `Assumption`, and `Uncertain` when useful
+- Do not present stale information as if it were current fact
+- Do not reduce business, military, economic, or political outcomes to a single cause
+- Do not turn probabilities into certainties
+- Do not present strategic preference as objective fact
+
+This is especially important in high-stakes questions involving markets, policy, conflict, negotiation, institutional behavior, or adversarial reactions.
+
 ## 适合什么场景
 
 这个 Skill 适合：
 
 - 商业决策
+- 商业战略与行业竞争分析
+- 军事态势判断与对手推演
+- 经济形势、资源配置与风险取舍
+- 政治博弈、政策变化与权力结构分析
 - 创业判断
 - 项目立项或砍项
 - 竞争分析
@@ -162,6 +213,13 @@ License: MIT
 - 判断一句
 - 建议动作
 
+复杂问题下，建议再补充：
+
+- 关键信息缺口
+- 核心假设
+
+每一栏应尽量先写决定性因素，而不是堆砌次要信息。
+
 ## 使用方式
 
 在支持 Skill 的环境中调用当前 Skill，并提供一个明确问题或场景。
@@ -209,6 +267,19 @@ License: MIT
 7. 输出判断与建议动作
 
 重点不在于写得多，而在于顺序不能乱。
+
+## Recommended Response Discipline
+
+For a strong answer, the skill should usually follow this sequence:
+
+1. Restate the decision question in one sentence
+2. Define the actor, timeframe, and comparison baseline
+3. Analyze in the order of Essence -> Conditions -> Gains-Losses -> Sequence -> Opponent
+4. Mark the key uncertainty or missing variable
+5. Give a conditional conclusion rather than a slogan
+6. End with 1-3 recommended actions linked to the analysis above
+
+This keeps the answer normative, accurate, and decision-useful rather than merely opinionated.
 
 ## 项目结构
 
