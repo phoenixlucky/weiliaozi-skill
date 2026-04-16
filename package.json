@@ -1,7 +1,7 @@
 {
   "name": "weiliaozi-skill",
   "version": "1.1.0",
-  "description": "Wei Liaozi Strategic Analysis for business, military, economic, and political decision-making. Responds in the user's question language.",
+  "description": "尉缭子分析法 - 按本质、条件、得失、先后、对手进行结构化决策分析。战略分析、商业博弈、政策判断、竞争推演专用。",
   "author": "phoenixlucky",
   "license": "MIT",
   "repository": {
