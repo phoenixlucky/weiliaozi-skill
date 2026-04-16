@@ -1,7 +1,7 @@
 ---
 name: weiliaozi-skill
 description: Wei Liaozi Strategic Analysis. Use when the user needs disciplined judgment for business, military, economic, or political questions; wants to assess whether an action is worth taking, what should happen first, and how rivals or counterparties may respond; or needs structured analysis for competition, negotiation, policy shifts, capital allocation, statecraft, or campaign planning. Framework: Essence -> Conditions -> Gains-Losses -> Sequence -> Opponent. Think in order, no skipping steps. Respond in the same language as the user's question.
-version: 1.1.1
+version: 1.1.2
 language: bilingual
 ---
 
