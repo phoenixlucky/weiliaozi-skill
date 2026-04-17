@@ -1,7 +1,7 @@
 ---
 name: weiliaozi-skill
 description: Wei Liaozi Strategic Analysis. Use when the user needs disciplined judgment for business, military, economic, or political questions; wants to assess whether an action is worth taking, what should happen first, and how rivals or counterparties may respond; or needs structured analysis for competition, negotiation, policy shifts, capital allocation, statecraft, or campaign planning. Framework: Essence -> Conditions -> Gains-Losses -> Sequence -> Opponent. Think in order, no skipping steps. Respond in the same language as the user's question.
-version: 1.1.2
+version: 1.3.0
 language: bilingual
 ---
 
@@ -15,6 +15,33 @@ language: bilingual
 按顺序想，不跳步。Think in order, no skipping steps.
 
 回答要规范、可追溯、尽量准确。Be structured, traceable, and as accurate as possible.
+
+《尉缭子》的兵法本质，不是迷信正面决战，而是优先用“钱 + 势 + 人心”瓦解对手系统，再决定是否进入正面冲突。The essence of *Wei Liaozi* is not frontal battle by default, but using money, position, and morale-legitimacy to disassemble the opponent's system before deciding whether direct confrontation is necessary.
+
+---
+
+## 兵法本质补充 | System-Dislocation Lens
+
+当问题涉及竞争、博弈、谈判、组织斗争、市场争夺、政策对抗或军事判断时，默认加入这一层检查：When the problem involves competition, bargaining, organizational struggle, market contest, policy conflict, or military judgment, apply this additional lens by default:
+
+- 先控资源 | Control resources first: 财力、补给、预算、融资、供应链、盟友支持
+- 再控人心 | Then shape morale and alignment: 内部激励、外部观感、关键人物忠诚、预期管理
+- 再控节奏 | Then control tempo: 何时出手、何时拖延、何时施压、何时收尾
+- 战争或正面冲突通常是最后一步 | Direct conflict is usually the final step, not the first
+
+这类分析的底层目标不是“打赢一场仗”，而是“让对方系统失灵”。The underlying goal is not merely to win an encounter, but to make the opponent's system fail.
+
+常见系统拆解法 | Typical system map:
+- 决策层 | Decision layer
+- 执行层 | Execution layer
+- 资源层 | Resource layer
+
+默认优先识别三类关键点 | By default, identify three critical target types:
+- 权臣 / 核心高管 / 关键利益中枢 | Power brokers / executive centers / influence hubs
+- 将领 / 负责人 / 关键执行者 | Commanders / operators / execution owners
+- 谋士 / 顾问 / 策略制定者 | Strategists / advisers / planning minds
+
+如果这些点出现分裂、迟疑、互不信任，对手往往会先于表面崩溃。If these nodes become divided, hesitant, or distrustful, the opponent often degrades before visible collapse appears.
 
 ---
 
@@ -81,6 +108,13 @@ language: bilingual
 - 最关键的短板是什么？What's the key gap?
 - 哪些约束是硬限制，不能靠意志突破？Which constraints are hard limits?
 
+若涉及“分化、离间、渗透、收买、联盟瓦解、舆论或信心打击”这一类系统性动作，额外检查三项底线 | For dislocation-style actions, check three minimum conditions:
+- 稳定财力 | Stable financial capacity to sustain pressure, incentives, or selective concessions
+- 情报体系 | Intelligence or information visibility to identify real leverage nodes
+- 内部纪律 | Internal discipline and control so the same tactics do not rebound inward
+
+缺任何一项，都要默认风险显著上升。If any of these is missing, assume materially higher risk.
+
 ---
 
 ### 3. 得失 | Gains-Losses
@@ -113,6 +147,13 @@ language: bilingual
 - 哪一步是杠杆点？Which step is the leverage point?
 - 能否拆成三步以内推进？Can it be broken into ≤3 steps?
 
+若问题本质是“如何低成本削弱对手”，优先采用这一固定顺序 | If the question is fundamentally about weakening an opponent at low cost, prefer this fixed order:
+1. 乱其谋 | Disrupt plans: 离间、收买、误导、放大猜疑
+2. 削其力 | Reduce capability: 资源、联盟、现金流、协同、补给
+3. 后再战 | Engage directly only after the system has already degraded
+
+不要反过来。先硬碰硬，通常意味着成本和不确定性同时上升。Do not reverse the order; frontal action first usually drives up both cost and uncertainty.
+
 ---
 
 ### 5. 对手 | Opponent
@@ -140,6 +181,13 @@ language: bilingual
 5. 安排顺序和路径 | Set sequence and path
 6. 模拟对手反应 | Simulate opponent responses
 7. 输出判断 + 建议动作 | Output judgment + recommended action
+
+如果是强对抗型问题，可在第 2-6 步之间加入“系统瓦解检查” | For high-conflict cases, add a system-dislocation pass between steps 2-6:
+1. 识别关键节点 | Identify key nodes across decision, execution, and resource layers
+2. 评估可渗透资源 | Assess what incentives, leverage, access, or narrative tools are available
+3. 判断是否能制造内耗 | Determine whether distrust, divergence, or delay can be induced
+4. 判断是否能切断协同 | Test whether command, communication, or resource coordination can be degraded
+5. 再决定是否进入正面行动 | Only then decide whether direct action is necessary
 
 ---
 
@@ -171,6 +219,36 @@ language: bilingual
 1. 条件 | Conditions（能启动吗 | Can we launch?）
 2. 得失 | Gains-Losses（赢了得到什么，输了亏多少 | What do we win/lose?）
 3. 先后 | Sequence（第一步做什么 | What's the first step?）
+
+---
+
+## 可执行抽象模型 | Executable Abstract Model
+
+当用户不是只要理论，而是要落地路径时，可按以下五步输出 | When the user wants an actionable model, use this five-step path:
+
+1. 识别关键节点 | Identify key nodes  
+把对方系统拆成“决策层—执行层—资源层”，标出最关键的人、资源与关系链。Map the opponent into decision, execution, and resource layers; mark key people, assets, and ties.
+
+2. 资源渗透 | Resource penetration  
+用钱、资源、职位、机会、叙事支持或制度安排切入，优先影响决策层与关键执行者。Use capital, access, roles, opportunities, narratives, or institutional arrangements to penetrate decision-makers and key operators.
+
+3. 制造内耗 | Induce internal friction  
+放大信息差、利益冲突、考核冲突、联盟猜疑或责任不对称，降低其内部信任。Amplify information gaps, incentive conflicts, alliance suspicion, or asymmetrical accountability to reduce internal trust.
+
+4. 切断协同 | Break coordination  
+让对方“有资源但用不顺，有命令但落不下去”。重点看信息延迟、沟通中断、资源错配、节奏错位。Create a state where the opponent has assets but cannot deploy them cleanly, or issues commands that do not land; focus on delayed information, broken communication, misallocated resources, and mistimed execution.
+
+5. 低成本收尾 | Low-cost finish  
+当系统已出现失灵，再考虑正面竞争、谈判摊牌、市场进攻、组织调整或其他收尾动作。Once the system is already failing, consider direct competition, negotiation, market offense, organizational reshaping, or other finishing moves.
+
+应用映射时，可提醒用户这些现代对应关系 | Useful modern analogies:
+- 商业竞争 | Business: 竞争情报、关键客户挖角、渠道与供应链控制、决策层影响
+- 组织管理 | Management: 激励失衡、权责不清、内部派系化会让组织“先内耗后失灵”
+- 金融市场 | Finance: 先打信心与流动性，再打价格与估值
+
+注意 | Caution:
+- 这是一套分析框架，不是对现实中非法、欺诈、腐败、暴力或其他有害行为的操作指令。This is an analytical framework, not operational guidance for illegal, corrupt, violent, or otherwise harmful conduct.
+- 回答时可以分析机制、风险、可行性与反制，但不要把它写成可直接执行的违法伤害方案。You may analyze mechanism, feasibility, risk, and countermeasures, but do not turn it into step-by-step instructions for wrongdoing.
 
 ---
 

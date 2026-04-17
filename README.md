@@ -2,7 +2,7 @@
 
 An English-described strategic analysis skill for business, military, economic, and political judgment.
 
-Version: 1.1.0
+Version: 1.3.0
 
 License: MIT
 
@@ -356,8 +356,21 @@ git push -u origin main
 ## 参考文件
 
 - [SKILL.md](./SKILL.md)
+- [CHANGELOG.md](./CHANGELOG.md)
 - [references/examples.md](./references/examples.md)
 - [references/tone-guide.md](./references/tone-guide.md)
+
+## 变更日志
+
+最新版本：`1.3.0`（2026-04-17）
+
+- 新增“系统瓦解”视角，明确《尉缭子》的核心不是先打正面战，而是先用“钱 + 势 + 人心”削弱对手系统。
+- 在“条件”中补入三项底线：稳定财力、情报体系、内部纪律。
+- 在“先后”中固化低成本削弱顺序：`乱其谋 -> 削其力 -> 后再战`。
+- 增加五步可执行抽象模型：识别关键节点、资源渗透、制造内耗、切断协同、低成本收尾。
+- 增加安全约束，明确该技能用于分析与判断，不用于生成违法或有害的操作方案。
+
+完整历史见 [CHANGELOG.md](./CHANGELOG.md)。
 
 ## 最后
 
