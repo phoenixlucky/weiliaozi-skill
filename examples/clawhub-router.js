@@ -8,4 +8,4 @@ const request = prepareClawHubRequest({
 
 console.log(JSON.stringify(request.route, null, 2));
 console.log("-----");
-console.log(request.systemPrompt.slice(0, 500));
+console.log(request.instructions.slice(0, 500));

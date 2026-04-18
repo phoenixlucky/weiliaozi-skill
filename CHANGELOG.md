@@ -4,11 +4,19 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a Changelog, with versions tracked in a practical project-oriented style.
 
+## [1.5.1] - 2026-04-18
+
+### Changed
+- Replaced the English historical-mode instruction that forced Chinese output with a rule that follows the user's language unless the host explicitly overrides it.
+- Renamed the host-facing documentation terminology from `prompt overlay` to `instruction layer` and exposed `instructions` as the primary request field while keeping `systemPrompt` as a compatibility alias.
+- Added explicit documentation that the host-side instruction layer is locally generated and does not ingest untrusted external text as control instructions.
+- Bumped the project version to `1.5.1` across `SKILL.md`, `README.md`, `CHANGELOG.md`, and `package.json`.
+
 ## [1.5.0] - 2026-04-18
 
 ### Added
 - Added a Node-based routing layer in `src/router.js` that classifies requests into `normal_analysis` or `historical_persona` before model invocation.
-- Added `src/prompts.js` to build ClawHub-facing system prompt overlays from the routing result.
+- Added `src/prompts.js` to build ClawHub-facing instruction overlays from the routing result.
 - Added `src/index.js` with `prepareClawHubRequest()` so hosts can assemble route metadata, prompt text, and message payloads in one call.
 - Added `examples/clawhub-router.js` as a minimal integration example for ClawHub-style hosts.
 

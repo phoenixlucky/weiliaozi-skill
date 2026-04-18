@@ -3,7 +3,7 @@
 const fs = require("fs");
 const path = require("path");
 const { routeWeiliaoziMode } = require("./router");
-const { buildClawHubSystemPrompt } = require("./prompts");
+const { buildClawHubInstructionLayer } = require("./prompts");
 
 function loadSkillMarkdown(skillPath) {
   const resolvedPath =
@@ -16,13 +16,14 @@ function prepareClawHubRequest(options) {
   const userInput = String(options?.userInput || "");
   const route = routeWeiliaoziMode(userInput);
   const skillContent = options?.skillContent || loadSkillMarkdown(options?.skillPath);
-  const systemPrompt = buildClawHubSystemPrompt(route, skillContent);
+  const instructions = buildClawHubInstructionLayer(route, skillContent);
 
   return {
     route,
-    systemPrompt,
+    instructions,
+    systemPrompt: instructions,
     messages: [
-      { role: "system", content: systemPrompt },
+      { role: "system", content: instructions },
       { role: "user", content: userInput }
     ]
   };

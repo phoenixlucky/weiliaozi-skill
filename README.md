@@ -2,7 +2,7 @@
 
 An English-described strategic analysis skill for business, military, economic, and political judgment.
 
-Version: 1.5.0
+Version: 1.5.1
 
 License: MIT
 
@@ -332,8 +332,8 @@ weiliaozi-skill/
 
 - `SKILL.md`: Skill 主定义与工作规范
 - `src/router.js`: 代码层路由判定，负责区分普通分析和历史人设模式
-- `src/prompts.js`: 根据路由结果生成给 ClawHub 的 system prompt 覆盖层
-- `src/index.js`: 组合路由和 prompt，生成可直接喂给宿主的消息结构
+- `src/prompts.js`: 根据路由结果生成给 ClawHub 的宿主指令层
+- `src/index.js`: 组合路由和宿主指令层，生成可直接喂给宿主的消息结构
 - `examples/clawhub-router.js`: 最小接入示例
 - `agents/openai.yaml`: 展示名称与简短说明
 - `references/examples.md`: 分析示例
@@ -353,7 +353,8 @@ const request = prepareClawHubRequest({
 });
 
 // request.route: 路由结果与命中的时间/人物/事件信号
-// request.systemPrompt: 已叠加路由覆盖层的 system prompt
+// request.instructions: 已叠加路由结果的宿主指令层
+// request.systemPrompt: 兼容旧接入的别名
 // request.messages: 可直接交给宿主继续发模型
 ```
 
@@ -365,6 +366,12 @@ const request = prepareClawHubRequest({
 - 无论是否切换模式，都保留原有五栏分析结构
 
 这层代码的作用不是替代 Skill，而是把“是否进入历史模式”的判断从模型侧前移到宿主侧，减少漏触发和风格漂移。
+
+安全边界：
+
+- 这是一层由宿主本地代码生成的受控指令层，不从网页、搜索结果、邮件或其他外部不可信文本中提取控制指令。
+- 路由结果只依赖本地正则信号匹配与本仓库内的 `SKILL.md` 内容，不接受外部返回内容覆盖宿主控制层。
+- 对外文档统一使用 `instructions` 命名；`systemPrompt` 仅作为兼容旧接入的保留别名。
 
 ## 行动方案
 
@@ -427,11 +434,15 @@ git push -u origin main
 
 ## 变更日志
 
-最新版本：`1.5.0`（2026-04-18）
+最新版本：`1.5.1`（2026-04-18）
 
 - 增加 `src/router.js`、`src/prompts.js`、`src/index.js`，提供可由 ClawHub 宿主在模型调用前执行的代码层路由。
-- 增加 `prepareClawHubRequest()`，把路由结果、system prompt 覆盖层和消息结构组合成可直接接入的请求对象。
+- 增加 `prepareClawHubRequest()`，把路由结果、宿主指令层和消息结构组合成可直接接入的请求对象。
 - 增加 `examples/clawhub-router.js` 示例，演示如何对“秦为什么二世而亡”这类问题先走历史路由，再进入技能正文。
+
+- 修正英文历史模式的语言规则，不再强制继续用中文输出，而是默认跟随用户语言。
+- 降低对外文档中的高敏感表述，统一将宿主侧覆盖说明写为 `instructions` / 宿主指令层，并保留 `systemPrompt` 兼容别名。
+- 增加安全边界说明，明确宿主控制层不接收外部不可信文本作为控制指令来源。
 
 - 增加“模式路由与优先级”说明，明确先判断是否命中历史模式，再生成回答，避免新增人设描述稀释原有规则。
 - 明确历史模式只是路由层：改变的是身份与开场，不得削弱既有五栏分析、准确性规则和系统拆解逻辑。

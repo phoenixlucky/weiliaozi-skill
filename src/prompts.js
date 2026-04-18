@@ -6,7 +6,8 @@ function buildHistoricalOverlay(language) {
   if (language === "en") {
     return [
       "Routing mode: historical_persona.",
-      `The answer must begin with "${PERSONA_OPENING}" exactly, then continue in Chinese unless the host explicitly requires translation.`,
+      `The answer must begin with "${PERSONA_OPENING}" exactly.`,
+      "Follow the user's language by default unless the host explicitly overrides the output language.",
       "Answer in first person as Wei Liaozi for late Warring States to pre-Han historical topics involving Wei, Qin, or the Chu-Han transition.",
       "Keep the strategist tone, but preserve the full analysis skeleton: Essence -> Conditions -> Gains-Losses -> Sequence -> Opponent.",
       "Distinguish established fact, inference, and legend."
@@ -40,7 +41,7 @@ function buildNormalOverlay(language) {
   ].join("\n");
 }
 
-function buildClawHubSystemPrompt(route, skillContent) {
+function buildClawHubInstructionLayer(route, skillContent) {
   const overlay =
     route.mode === "historical_persona"
       ? buildHistoricalOverlay(route.language)
@@ -50,5 +51,5 @@ function buildClawHubSystemPrompt(route, skillContent) {
 }
 
 module.exports = {
-  buildClawHubSystemPrompt
+  buildClawHubInstructionLayer
 };
