@@ -2,7 +2,7 @@
 
 An English-described strategic analysis skill for business, military, economic, and political judgment.
 
-Version: 1.4.2
+Version: 1.5.0
 
 License: MIT
 
@@ -75,6 +75,13 @@ English:
 
 - 这一部分是回答风格和历史叙事约束，不等于所有细节都已被严格史证确认。
 - 涉及传说性内容时，仍应区分史实、推断和后世附会。
+
+为避免新增设定把原有能力冲淡，实际执行时应按这个优先级：
+
+- 先做模式路由：先判断问题是否命中战国末期至汉建立前的魏、秦、楚汉历史范围。
+- 命中后只切换“说话身份”和“开场形式”，不丢掉原有五栏分析、系统拆解、准确性规则。
+- 未命中时完全按普通 `尉缭子分析法` 执行，不能因为人设背景说明而弱化原本触发。
+- `人设设定` 只是背景，不单独构成触发条件；真正决定是否切换模式的是时间范围、相关人物、相关事件。
 
 ## Answer Quality Standard
 
@@ -308,6 +315,12 @@ This keeps the answer normative, accurate, and decision-useful rather than merel
 weiliaozi-skill/
 ├── SKILL.md
 ├── README.md
+├── examples/
+│   └── clawhub-router.js
+├── src/
+│   ├── index.js
+│   ├── prompts.js
+│   └── router.js
 ├── agents/
 │   └── openai.yaml
 └── references/
@@ -318,9 +331,40 @@ weiliaozi-skill/
 文件说明：
 
 - `SKILL.md`: Skill 主定义与工作规范
+- `src/router.js`: 代码层路由判定，负责区分普通分析和历史人设模式
+- `src/prompts.js`: 根据路由结果生成给 ClawHub 的 system prompt 覆盖层
+- `src/index.js`: 组合路由和 prompt，生成可直接喂给宿主的消息结构
+- `examples/clawhub-router.js`: 最小接入示例
 - `agents/openai.yaml`: 展示名称与简短说明
 - `references/examples.md`: 分析示例
 - `references/tone-guide.md`: 输出风格与压缩规则
+
+## ClawHub 代码层路由
+
+如果你不想只依赖 `SKILL.md` 的自然语言约束，可以在 ClawHub 发起模型请求前，先跑一层代码路由。
+
+最小接入方式：
+
+```js
+const { prepareClawHubRequest } = require("weiliaozi-skill");
+
+const request = prepareClawHubRequest({
+  userInput: "你怎么看秦为什么二世而亡？"
+});
+
+// request.route: 路由结果与命中的时间/人物/事件信号
+// request.systemPrompt: 已叠加路由覆盖层的 system prompt
+// request.messages: 可直接交给宿主继续发模型
+```
+
+路由逻辑：
+
+- 同时检查 `时间信号`、`人物信号`、`事件信号`
+- 命中至少两类信号时，切到 `historical_persona`
+- 历史模式下强制要求回答以 `臣缭以为` 开头
+- 无论是否切换模式，都保留原有五栏分析结构
+
+这层代码的作用不是替代 Skill，而是把“是否进入历史模式”的判断从模型侧前移到宿主侧，减少漏触发和风格漂移。
 
 ## 行动方案
 
@@ -383,7 +427,15 @@ git push -u origin main
 
 ## 变更日志
 
-最新版本：`1.4.2`（2026-04-18）
+最新版本：`1.5.0`（2026-04-18）
+
+- 增加 `src/router.js`、`src/prompts.js`、`src/index.js`，提供可由 ClawHub 宿主在模型调用前执行的代码层路由。
+- 增加 `prepareClawHubRequest()`，把路由结果、system prompt 覆盖层和消息结构组合成可直接接入的请求对象。
+- 增加 `examples/clawhub-router.js` 示例，演示如何对“秦为什么二世而亡”这类问题先走历史路由，再进入技能正文。
+
+- 增加“模式路由与优先级”说明，明确先判断是否命中历史模式，再生成回答，避免新增人设描述稀释原有规则。
+- 明确历史模式只是路由层：改变的是身份与开场，不得削弱既有五栏分析、准确性规则和系统拆解逻辑。
+- 补充时间/人物/事件三类触发信号，并要求对短问句也直接命中，不再依赖模糊语感。
 
 - 强化历史问答触发规则：凡命中战国末期至汉建立前的魏、秦、楚汉问题，必须使用尉缭子第一视角，不得退回普通口吻。
 - 增加显式强制触发示例，覆盖“秦灭亡”“秦为什么二世而亡”“秦末乱局”“楚汉相争”等常见问法。

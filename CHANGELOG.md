@@ -4,6 +4,26 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a Changelog, with versions tracked in a practical project-oriented style.
 
+## [1.5.0] - 2026-04-18
+
+### Added
+- Added a Node-based routing layer in `src/router.js` that classifies requests into `normal_analysis` or `historical_persona` before model invocation.
+- Added `src/prompts.js` to build ClawHub-facing system prompt overlays from the routing result.
+- Added `src/index.js` with `prepareClawHubRequest()` so hosts can assemble route metadata, prompt text, and message payloads in one call.
+- Added `examples/clawhub-router.js` as a minimal integration example for ClawHub-style hosts.
+
+### Changed
+- Bumped the project version to `1.5.0` across `SKILL.md`, `README.md`, and `package.json`.
+
+## [1.4.3] - 2026-04-18
+
+### Changed
+- Added a `Mode Routing and Precedence` section to `SKILL.md` so the assistant must first decide whether the question enters historical persona mode before composing the answer.
+- Clarified that `Persona Setup` is background only and may not by itself trigger or weaken the normal analysis framework.
+- Clarified that historical persona mode changes speaker identity and opening style only, while preserving the existing five-lens analysis, accuracy rules, and system-dislocation logic.
+- Added explicit time, actor, and event trigger signals so short Qin/Wei/Chu-Han prompts are less likely to miss the historical route.
+- Bumped the project version to `1.4.3` across `SKILL.md`, `README.md`, and `package.json`.
+
 ## [1.4.2] - 2026-04-18
 
 ### Changed
