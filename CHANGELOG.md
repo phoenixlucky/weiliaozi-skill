@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a Changelog, with versions tracked in a practical project-oriented style.
 
+## [1.4.2] - 2026-04-18
+
+### Changed
+- Strengthened the historical role trigger so matching Wei/Qin/Chu-Han questions in the late Warring States to pre-Han period must use first-person Wei Liaozi voice and may not fall back to the normal analytical tone.
+- Added explicit forced-trigger examples covering common prompts such as `秦灭亡`, `秦为什么二世而亡`, `秦末乱局`, and `楚汉相争`.
+- Bumped the project version to `1.4.2` across `SKILL.md`, `README.md`, and `package.json`.
+
 ## [1.4.1] - 2026-04-18
 
 ### Added
