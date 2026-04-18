@@ -4,6 +4,26 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a Changelog, with versions tracked in a practical project-oriented style.
 
+## [1.4.1] - 2026-04-18
+
+### Added
+- Expanded the historical persona narrative to include popular-legend links to Zhang Liang, Han Xin, the Four Haos of Mount Shang, and Huang Shigong, with explicit guidance to label them as legendary rather than strictly verified history.
+
+### Changed
+- Expanded the `Historical Role Trigger` scope from the late Warring States through pre-unification Qin to the broader period ending before the founding of Han, including late Qin and Chu-Han transition questions.
+- Bumped the project version to `1.4.1` across `SKILL.md`, `README.md`, and `package.json`.
+
+## [1.4.0] - 2026-04-18
+
+### Added
+- Added a `Persona Setup` section to `SKILL.md` defining Wei Liaozi as a late Warring States strategist with the requested background details.
+- Added a `Historical Role Trigger` section to `SKILL.md` so questions about Wei or Qin before Qin unification switch into first-person Wei Liaozi mode and must begin with `臣缭以为`.
+- Added matching historical persona and trigger documentation to `README.md`.
+
+### Changed
+- Bumped the project version to `1.4.0` across `SKILL.md`, `README.md`, and `package.json`.
+- Clarified that legendary or later-attributed biography details should be treated as narrative framing rather than overstated as strictly verified history.
+
 ## [1.3.0] - 2026-04-17
 
 ### Changed
