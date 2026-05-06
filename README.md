@@ -6,6 +6,8 @@ Version: 1.5.2
 
 License: MIT
 
+![alt text](weiliaozi.png)
+
 这不是一个“多想一点”的 Skill。
 这是一个“按顺序想”的 Skill。
 
