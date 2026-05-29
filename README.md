@@ -1,8 +1,8 @@
 # 尉缭子分析法 Skill
 
-An English-described strategic analysis skill for business, military, economic, and political judgment.
+An English-described structured analysis skill using the Wei Liaozi five-lens framework: Essence → Conditions → Gains-Losses → Sequence → Opponent.
 
-Version: 1.5.2
+Version: 2.0.0
 
 License: MIT
 
@@ -25,14 +25,14 @@ It is designed for high-stakes decisions where leaders need clearer structure, s
 
 ## What It Does
 
-`尉缭子分析法 Skill` 是一个用于战略分析、决策判断和博弈推演的 Agent Skill。
+`尉缭子分析法 Skill` 是一个用于结构化分析和情景推演的 Agent Skill，采用五栏框架：本质 → 条件 → 得失 → 先后 → 对手。
 
-It helps turn complex questions into structured judgment across:
+It helps turn complex questions into structured analysis across:
 
 - Business strategy and competitive positioning
-- Military planning and adversary assessment
-- Economic analysis and resource allocation
-- Political strategy, policy shifts, and power dynamics
+- Organizational and policy analysis
+- Economic trade-off assessment
+- Historical and strategic scenario reasoning
 
 它把问题拆成五个固定视角：
 
@@ -57,37 +57,26 @@ English:
 - If the user asks in English, it answers in English.
 - If the user mixes languages, it follows the dominant language of the request.
 
-## 历史人设与触发规则
+## 历史分析视角
 
-除了一般战略分析模式，这个 Skill 现在还带有一层历史人设规则：
+除了一般分析模式，这个 Skill 还带有一层历史分析视角。
 
-- 默认人物底稿为战国末期的尉缭子：出身布衣，可能来自魏国或其他中原诸侯国。
-- 叙事设定中，他于公元前 237 年入秦，为秦王政提供军事与治军建议。
-- 人设重点是：强调以法治军、统一指挥、强化国家对军队的控制，并保留“直言敢谏”的谋臣形象。
-- 民间叙事扩展中，可纳入张良、韩信、商山四皓、黄石公等相关传说谱系，但必须标明这是传说性内容。
+**触发方式（用户引导）：** 当用户明确问及战国末期至汉建立前的魏国、秦国、楚汉相关问题时，可以切换到历史分析视角：
 
-触发条件：
+- 回答可以 `臣缭以为` 开头，以历史分析者口吻展开
+- 必须保留五栏分析骨架，不能只剩风格模仿
+- 区分史实、推断和传说
+- 如问题超出该范围，自动回退到一般分析模式
+- 不主动触发历史视角
 
-- 如果用户问及战国末期至汉建立前的魏国、秦国、楚汉相关问题，回答必须切换为尉缭子第一视角，不能退回普通分析口吻。
-- 该模式下，回答必须以 `臣缭以为` 开头。
-- 如果问题不在这个历史范围内，仍按普通分析 Skill 的方式正常回答。
-- 像“秦灭亡”“秦为什么而亡”“秦末乱局”“楚汉相争”“张良韩信与尉缭关系”这类问法，也应直接命中该模式。
-
-注意：
-
-- 这一部分是回答风格和历史叙事约束，不等于所有细节都已被严格史证确认。
-- 涉及传说性内容时，仍应区分史实、推断和后世附会。
-
-为避免新增设定把原有能力冲淡，实际执行时应按这个优先级：
-
-- 先做模式路由：先判断问题是否命中战国末期至汉建立前的魏、秦、楚汉历史范围。
-- 命中后只切换“说话身份”和“开场形式”，不丢掉原有五栏分析、系统拆解、准确性规则。
-- 未命中时完全按普通 `尉缭子分析法` 执行，不能因为人设背景说明而弱化原本触发。
-- `人设设定` 只是背景，不单独构成触发条件；真正决定是否切换模式的是时间范围、相关人物、相关事件。
+**人物背景：**
+- 默认人物底稿为战国末期的尉缭子：出身布衣，可能来自魏国或其他中原诸侯国
+- 公元前 237 年入秦，为秦王政提供军事与治军建议
+- 民间叙事扩展中可纳入张良、韩信、商山四皓、黄石公等相关传说谱系，但必须标明是传说性内容
 
 ## Answer Quality Standard
 
-This skill is designed to produce analysis that is not only structured, but also disciplined and auditable.
+This skill is designed to produce analysis that is structured, disciplined, and auditable.
 
 - Analysis first, conclusion second
 - Facts first, judgment second
@@ -135,6 +124,16 @@ This is especially important in high-stakes questions involving markets, policy,
 - 方案很多，但不知道哪条路更稳
 - 想避免一上来就拍脑袋决策
 - 需要把复杂问题压缩成一个可执行判断
+
+## 系统结构分析
+
+当问题涉及组织、市场、竞争或政策分析时，Skill 会加入系统性分析维度，用于理解系统结构：
+
+- **资源层**：财力、补给、预算、供应链、外部支持
+- **共识层**：内部激励、关键参与者立场、信任关系
+- **节奏层**：时机、先后、压力点与收尾信号
+
+分析目标：理解系统结构中的脆弱点，而非指示如何利用它们。
 
 ## 五个分析视角
 
@@ -240,8 +239,8 @@ This is especially important in high-stakes questions involving markets, policy,
 
 最后补两项：
 
-- 判断一句
-- 建议动作
+- 权衡总结
+- 参考方向
 
 复杂问题下，建议再补充：
 
@@ -252,15 +251,15 @@ This is especially important in high-stakes questions involving markets, policy,
 
 ## 使用方式
 
-在支持 Skill 的环境中调用当前 Skill，并提供一个明确问题或场景。
+调用当前 Skill，并提供一个明确问题或场景。
 
-### 方式一：判断值不值得做
+### 方式一：分析值不值得做
 
 ```text
 我们要不要在今年进入日本市场？请用尉缭子分析法判断。
 ```
 
-### 方式二：分析项目优先级
+### 方式二：评估项目优先级
 
 ```text
 团队资源有限，只能做一个方向：
@@ -294,7 +293,7 @@ This is especially important in high-stakes questions involving markets, policy,
 4. 再计算收益、成本和风险
 5. 再安排顺序和路径
 6. 最后模拟对手反应
-7. 输出判断与建议动作
+7. 输出权衡总结与参考方向
 
 重点不在于写得多，而在于顺序不能乱。
 
@@ -307,7 +306,7 @@ For a strong answer, the skill should usually follow this sequence:
 3. Analyze in the order of Essence -> Conditions -> Gains-Losses -> Sequence -> Opponent
 4. Mark the key uncertainty or missing variable
 5. Give a conditional conclusion rather than a slogan
-6. End with 1-3 recommended actions linked to the analysis above
+6. End with a trade-off summary and reference directions linked to the analysis above
 
 This keeps the answer normative, accurate, and decision-useful rather than merely opinionated.
 
@@ -317,16 +316,7 @@ This keeps the answer normative, accurate, and decision-useful rather than merel
 weiliaozi-skill/
 ├── SKILL.md
 ├── README.md
-├── examples/
-│   └── clawhub-router.js
-├── src/
-│   ├── index.js
-│   ├── prompts.js
-│   └── router.js
-├── test/
-│   └── router.test.js
-├── agents/
-│   └── openai.yaml
+├── CHANGELOG.md
 └── references/
     ├── examples.md
     └── tone-guide.md
@@ -335,48 +325,16 @@ weiliaozi-skill/
 文件说明：
 
 - `SKILL.md`: Skill 主定义与工作规范
-- `src/router.js`: 代码层路由判定，负责区分普通分析和历史人设模式
-- `src/prompts.js`: 根据路由结果生成给 ClawHub 的宿主指令层
-- `src/index.js`: 组合路由和宿主指令层，生成可直接喂给宿主的消息结构
-- `examples/clawhub-router.js`: 最小接入示例
-- `test/router.test.js`: 路由规则与请求结构测试
-- `agents/openai.yaml`: 展示名称与简短说明
+- `README.md`: 本说明文档
+- `CHANGELOG.md`: 版本变更历史
 - `references/examples.md`: 分析示例
 - `references/tone-guide.md`: 输出风格与压缩规则
 
-## ClawHub 代码层路由
+## 代码层路由（已归档）
 
-如果你不想只依赖 `SKILL.md` 的自然语言约束，可以在 ClawHub 发起模型请求前，先跑一层代码路由。
+旧版（v1.x）包含 ClawHub 代码层路由文件（`src/`、`examples/`、`test/`），用于在模型请求前做历史模式路由判定。
 
-最小接入方式：
-
-```js
-const { prepareClawHubRequest } = require("weiliaozi-skill");
-
-const request = prepareClawHubRequest({
-  userInput: "你怎么看秦为什么二世而亡？"
-});
-
-// request.route: 路由结果与命中的时间/人物/事件信号
-// request.instructions: 已叠加路由结果的宿主指令层
-// request.messages: 可直接交给宿主继续发模型
-```
-
-路由逻辑：
-
-- 同时检查 `时间信号`、`人物信号`、`事件信号`
-- 对“秦灭亡”“楚汉相争”“张良韩信与尉缭关系”等短问句设置直接命中规则
-- 命中至少两类信号时，切到 `historical_persona`
-- 历史模式下要求回答以 `臣缭以为` 开头
-- 无论是否切换模式，都保留原有五栏分析结构
-
-这层代码的作用不是替代 Skill，而是把“是否进入历史模式”的判断从模型侧前移到宿主侧，减少漏触发和风格漂移。
-
-安全边界：
-
-- 这是一层由宿主本地代码生成的受控指令层，不从网页、搜索结果、邮件或其他外部不可信文本中提取控制指令。
-- 路由结果只依赖本地正则信号匹配与本仓库内的 `SKILL.md` 内容，不接受外部返回内容覆盖宿主控制层。
-- 对外文档统一使用 `instructions` 命名，不再展示旧版兼容字段名。
+v2.0.0 已移除这些文件，技能行为完全由 `SKILL.md` 定义。
 
 ## 行动方案
 
@@ -401,7 +359,7 @@ git status
 ### 2. 提交本次更新
 
 ```bash
-git add README.md SKILL.md agents references package.json
+git add SKILL.md README.md CHANGELOG.md references/ package.json
 git commit -m "docs: convert skill to weiliaozi analysis"
 ```
 
@@ -439,7 +397,15 @@ git push -u origin main
 
 ## 变更日志
 
-最新版本：`1.5.2`（2026-04-27）
+最新版本：`2.0.0`（2026-05-XX）
+
+- **v2.0.0 重构**：为满足 ClawHub 合规要求进行整体调整。
+  - 运行方式改为 subagent 模式，工具列表限定为只读工具（read_file, search_content, search_files, get_symbols, web_search, web_fetch）
+  - 历史人设模式从"自动触发"改为"用户引导触发"，消除自治决策判断
+  - 兵法系统分析从"瓦解对手"框架重构为"系统结构分析"框架，目标为理解而非操作
+  - 输出格式从"判断一句 + 建议动作"改为"权衡总结 + 参考方向"
+  - 新增明确的行为边界章节，标注禁止与允许范围
+  - 五栏分析、双语输出、准确性规则等核心功能完整保留
 
 - 移除 README 中容易被静态安全扫描误判的旧版兼容字段名展示。
 - `prepareClawHubRequest()` 继续以 `instructions` 作为宿主接入的正式字段。
