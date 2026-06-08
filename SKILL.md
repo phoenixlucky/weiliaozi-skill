@@ -1,8 +1,8 @@
 ---
 name: weiliaozi-skill
 description: Structured analysis using the Wei Liaozi five-lens framework. Use when the user needs disciplined reasoning about a question or scenario — including historical analysis, system structure, trade-off assessment, sequence logic, and game-theoretic response mapping. Framework: Essence -> Conditions -> Gains-Losses -> Sequence -> Opponent. Think in order, no skipping steps. Respond in the same language as the user's question.
-version: 2.0.0
-language: bilingual
+version: 2.1.0
+language: follow_user
 run_as: subagent
 allowed_tools:
   - read_file
@@ -26,6 +26,8 @@ allowed_tools:
 
 《尉缭子》的核心分析方法，不是依赖正面对抗，而是先理解结构、约束、利益分配，再决定节奏与博弈方式。The core of *Wei Liaozi* analysis is not frontal confrontation by default, but understanding structure, constraints, and incentive alignment before determining sequence and game logic.
 
+**尉缭在嬴政手下做事，不容有误——本 Skill 的分析同样不容敷衍。** 每一条判断必须有据可依，每一处不确定必须标明，绝不以模糊措辞替代严谨推理。**Wei Liao served under King Zheng of Qin, where no mistake was tolerated — this Skill holds itself to the same standard.** Every judgment must be evidence-backed, every uncertainty must be marked, and vague language must never replace rigorous reasoning.
+
 ---
 
 ## 工作模式 | Modes
@@ -39,7 +41,10 @@ allowed_tools:
 **输出结构 | Output structure:**
 1. 一句话重述问题 | Restate the question in one sentence
 2. 五栏分析 | Five-lens analysis
-3. 权衡总结（关键取舍、参考方向、信息缺口）| Trade-off summary with key implications and reference directions
+3. 权衡总结 | Trade-off Summary（关键取舍和主要不确定因素 | Key trade-offs and main uncertainties）
+4. 参考方向 | Reference Directions（基于分析的可能路径，非指令型 | Possible directions based on analysis, not directive）
+5. 关键信息缺口 | Key information gaps
+6. 核心假设 | Core assumptions
 
 ### 模式 B：历史分析视角 | Mode B: Historical Analysis Perspective
 
@@ -64,7 +69,7 @@ allowed_tools:
 
 ---
 
-## 兵法本质 | System Structure Analysis
+## 系统结构分析 | System Structure Analysis
 
 当用户的问题涉及组织、市场、竞争或政策分析时，默认加入系统性分析维度，用于理解系统结构而非操作指令。When the user's question involves organizational, market, competitive, or policy analysis, by default add a systemic lens for understanding structural dynamics — not for operational instruction.
 
@@ -247,7 +252,7 @@ allowed_tools:
 
 ## 快速路径 | Fast Path
 
-当用户主要是想快速理解一个情景时 | When the user mainly wants a quick understanding of a scenario:
+当用户主要是想快速理解一个情景时，可使用以下简化路径。**注意：快速路径仅用于初步筛查，不替代完整五栏分析。** When the user mainly wants a quick understanding of a scenario, use the following simplified path. **Note: the fast path is for preliminary screening only; it does not replace a full five-lens analysis.**
 
 1. 条件 | Conditions（基础情况 | Foundation）
 2. 得失 | Gains-Losses（核心取舍 | Core trade-offs）

@@ -4,6 +4,25 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a Changelog, with versions tracked in a practical project-oriented style.
 
+## [2.1.0] - 2026-04-28
+
+### Changed
+- Bumped version to 2.1.0 across `SKILL.md`, `README.md`, `CHANGELOG.md`, and `package.json`.
+
+## [2.0.0] - 2026-04-28
+
+### Removed
+- **Breaking:** Removed `src/` directory (`router.js`, `prompts.js`, `index.js`) due to ClawHub security protocol violations. Host-side instruction routing must no longer be shipped as executable code within the skill package.
+- **Breaking:** Removed `examples/clawhub-router.js` integration example for the same security reason.
+
+### Changed
+- Reverted the skill to a pure declarative specification: only `SKILL.md`, `README.md`, `CHANGELOG.md`, and `references/` are shipped.
+- Updated `package.json` `files` field to reflect the reduced distribution surface.
+- Bumped major version to `2.0.0` across `SKILL.md`, `README.md`, `CHANGELOG.md`, and `package.json`.
+
+### Security
+- All instruction-layer logic that ClawHub previously consumed from `src/` must now be generated host-side from the declarative spec; the skill package no longer contains executable routing or prompt-assembly code.
+
 ## [1.5.2] - 2026-04-27
 
 ### Changed

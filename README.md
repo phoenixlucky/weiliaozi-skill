@@ -2,7 +2,7 @@
 
 An English-described structured analysis skill using the Wei Liaozi five-lens framework: Essence → Conditions → Gains-Losses → Sequence → Opponent.
 
-Version: 2.0.0
+Version: 2.1.0
 
 License: MIT
 
@@ -77,6 +77,9 @@ English:
 ## Answer Quality Standard
 
 This skill is designed to produce analysis that is structured, disciplined, and auditable.
+
+> 尉缭在嬴政手下做事，不容有误——这套分析法的标准同样不容敷衍。
+> Wei Liao served under King Zheng of Qin, where no mistake was tolerated — this Skill holds itself to the same standard.
 
 - Analysis first, conclusion second
 - Facts first, judgment second
@@ -397,7 +400,7 @@ git push -u origin main
 
 ## 变更日志
 
-最新版本：`2.0.0`（2026-05-XX）
+最新版本：`2.1.0`（2026-04-28）
 
 - **v2.0.0 重构**：为满足 ClawHub 合规要求进行整体调整。
   - 运行方式改为 subagent 模式，工具列表限定为只读工具（read_file, search_content, search_files, get_symbols, web_search, web_fetch）
@@ -406,36 +409,18 @@ git push -u origin main
   - 输出格式从"判断一句 + 建议动作"改为"权衡总结 + 参考方向"
   - 新增明确的行为边界章节，标注禁止与允许范围
   - 五栏分析、双语输出、准确性规则等核心功能完整保留
+  - **Breaking:** 移除 `src/` 与 `examples/` 代码层路由文件（安全合规）
 
-- 移除 README 中容易被静态安全扫描误判的旧版兼容字段名展示。
-- `prepareClawHubRequest()` 继续以 `instructions` 作为宿主接入的正式字段。
-- 增加路由测试，覆盖 README 中承诺直接命中的历史短问句。
+### 历史版本摘要
 
-- 增加 `src/router.js`、`src/prompts.js`、`src/index.js`，提供可由 ClawHub 宿主在模型调用前执行的代码层路由。
-- 增加 `prepareClawHubRequest()`，把路由结果、宿主指令层和消息结构组合成可直接接入的请求对象。
-- 增加 `examples/clawhub-router.js` 示例，演示如何对“秦为什么二世而亡”这类问题先走历史路由，再进入技能正文。
-
-- 修正英文历史模式的语言规则，不再固定继续用中文输出，而是默认跟随用户语言。
-- 降低对外文档中的高敏感表述，统一将宿主侧覆盖说明写为 `instructions` / 宿主指令层。
-- 增加安全边界说明，明确宿主控制层不接收外部不可信文本作为控制指令来源。
-
-- 增加“模式路由与优先级”说明，明确先判断是否命中历史模式，再生成回答，避免新增人设描述稀释原有规则。
-- 明确历史模式只是路由层：改变的是身份与开场，不得削弱既有五栏分析、准确性规则和系统拆解逻辑。
-- 补充时间/人物/事件三类触发信号，并要求对短问句也直接命中，不再依赖模糊语感。
-
-- 强化历史问答触发规则：凡命中战国末期至汉建立前的魏、秦、楚汉问题，必须使用尉缭子第一视角，不得退回普通口吻。
-- 增加显式触发示例，覆盖“秦灭亡”“秦为什么二世而亡”“秦末乱局”“楚汉相争”等常见问法。
-
-- 将“历史问答触发规则”从“战国末期至秦统一前”扩展为“战国末期至汉建立前”，覆盖秦末与楚汉相争叙事。
-- 在人物设定中加入民间传说谱系：张良、韩信、商山四皓、黄石公等相关关联，但明确标注为传说性内容。
-- 增加尉缭子人物底稿，包括布衣出身、可能来自魏或中原诸侯国、公元前 237 年入秦、为秦王政提供军政建议等设定。
-- 明确这类设定属于风格与叙事约束，涉及传说内容时不得冒充严格史实。
-
-- 新增“系统瓦解”视角，明确《尉缭子》的核心不是先打正面战，而是先用“钱 + 势 + 人心”削弱对手系统。
-- 在“条件”中补入三项底线：稳定财力、情报体系、内部纪律。
-- 在“先后”中固化低成本削弱顺序：`乱其谋 -> 削其力 -> 后再战`。
-- 增加五步可执行抽象模型：识别关键节点、资源渗透、制造内耗、切断协同、低成本收尾。
-- 增加安全约束，明确该技能用于分析与判断，不用于生成违法或有害的操作方案。
+| 版本 | 日期 | 主要变更 |
+|------|------|----------|
+| 1.5.x | 2026-04 | 移除旧版字段名、修正语言跟随规则 |
+| 1.4.x | 2026-04 | 历史视角触发规则扩展、人物设定与传说谱系 |
+| 1.3.0 | 2026-04 | 统一版本号 |
+| 1.2.0 | 2026-04 | 系统结构分析视角、低成本削弱顺序 |
+| 1.1.x | 2026-04 | 双语规范、回答质量与准确性规则完善 |
+| 1.0.0 | 2026-04 | 初始发布，五栏分析框架 |
 
 完整历史见 [CHANGELOG.md](./CHANGELOG.md)。
 
