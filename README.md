@@ -1,27 +1,38 @@
-# 尉缭子分析法 Skill
+# 尉缭子分析法 · Wei Liaozi Analysis Framework
 
-An English-described structured analysis skill using the Wei Liaozi five-lens framework — a synthesis of pre-Qin strategic thought from Huangdi, Jiang Ziya, Sun Wu, Wu Qi, and Duke Huan of Qi. Framework: Essence → Conditions → Gains-Losses → Sequence → Opponent.
+<p align="center">
+  <img src="https://img.shields.io/badge/version-2.2.0-blue" alt="Version">
+  <img src="https://img.shields.io/badge/license-MIT-green" alt="License">
+  <img src="https://img.shields.io/github/last-commit/phoenixlucky/weiliaozi-skill" alt="Last Commit">
+  <img src="https://img.shields.io/github/repo-size/phoenixlucky/weiliaozi-skill" alt="Repo Size">
+</p>
 
-Version: 2.2.0
+<p align="center">
+  <b>融汇黄帝、太公望、孙武、吴起、齐桓公五位先贤思想的五栏结构化分析框架</b><br>
+  <i>Essence → Conditions → Gains-Losses → Sequence → Opponent</i>
+</p>
 
-License: MIT
+---
+
+## 能解决什么问题
+
+很多决策问题，错不在信息太少，而在**顺序错了**：
+
+| 常见错误 | 五栏框架如何拦住 |
+|----------|------------------|
+| ❌ 还没看清本质，就急着下结论 | **本质栏**：先拆底层结构 |
+| ❌ 还没检查条件，就开始谈方案 | **条件栏**：先查可行性基础 |
+| ❌ 还没算清得失，就先投入资源 | **得失栏**：先算值不值得 |
+| ❌ 还没排好先后，就想一步到位 | **先后栏**：先定节奏路径 |
+| ❌ 还没模拟对手，就假设对方不会动 | **对手栏**：先推演博弈反应 |
+
+> **这套方法的核心不是"多想"，而是"按顺序想"。** 顺序就是方法本身。
+
+适用场景：商业决策、战略定位、竞争分析、谈判准备、组织治理、项目取舍、政策研判、历史分析——任何"值不值得做、能不能做、先做什么"的问题。
 
 ![alt text](weiliaozi.png)
 
-这不是一个“多想一点”的 Skill。
-这是一个“按顺序想”的 Skill。
-
-It is designed for high-stakes decisions where leaders need clearer structure, sharper tradeoff analysis, and a better read on opponents, institutions, and timing.
-
-很多决策问题，错不在信息太少，而在顺序错了:
-
-- 还没看清本质，就急着下结论
-- 还没检查条件，就开始谈方案
-- 还没算清得失，就先投入资源
-- 还没排好先后，就想一步到位
-- 还没模拟对手，就假设对方不会动
-
-`尉缭子分析法 Skill` 的目标，就是把这些错误前置拦住。
+---
 
 ## 思想渊源
 
